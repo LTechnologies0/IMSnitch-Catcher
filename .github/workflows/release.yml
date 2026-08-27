@@ -66,7 +66,7 @@ jobs:
           for apk in app/build/outputs/apk/release/*-release.apk; do
             base=$(basename "$apk")
             # app-arm64-v8a-release.apk → IMSnitchCatcher-0.1.0-arm64-v8a-release.apk
-            abi=$(echo "$base" | sed -E 's/^app-([^-]+)-release\.apk$/\1/')
+            abi=$(echo "$base" | sed -E 's/^app-(.+)-release\.apk$/\1/')
             if [ "$abi" = "$base" ]; then
               cp "$apk" "dist/release/IMSnitchCatcher-${VERSION}-release.apk"
             else
@@ -74,6 +74,12 @@ jobs:
             fi
           done
           ls -lh dist/release/
+          # Expect 4 ABI APKs from splits
+          count=$(find dist/release -name '*-release.apk' | wc -l)
+          if [ "$count" -lt 4 ]; then
+            echo "::error::Expected 4 ABI APKs, found $count"
+            exit 1
+          fi
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2

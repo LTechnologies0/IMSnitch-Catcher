@@ -12,8 +12,8 @@ android {
         applicationId = "ltechnologies.onionphone.imsnitch"
         minSdk = 26
         targetSdk = 37
-        versionCode = 1
-        versionName = providers.gradleProperty("VERSION_NAME").orElse("0.1.0").get()
+        versionCode = 2
+        versionName = providers.gradleProperty("VERSION_NAME").orElse("0.1.1").get()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
