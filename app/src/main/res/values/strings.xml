@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IMSnitch Catcher</string>
+    <string name="channel_monitor">Cell monitoring</string>
+    <string name="channel_monitor_desc">Ongoing scan of nearby / serving cell towers</string>
+    <string name="channel_alert">Tower threat alerts</string>
+    <string name="channel_alert_desc">High-severity IMSI-catcher / rogue BTS heuristics</string>
+    <string name="monitor_notif_title">Watching cellular network</string>
+    <string name="monitor_starting">Starting cell scan…</string>
+    <string name="status_need_perms">Need location + phone permissions</string>
+    <string name="need_permissions">CellInfo requires fine location and phone state. Without them Android will not expose tower identities.</string>
+    <string name="grant_permissions">Grant permissions</string>
+    <string name="monitor_toggle">Background monitoring</string>
+    <string name="monitor_toggle_desc">Foreground service polls CellInfo every 15s</string>
+    <string name="auto_airplane">Auto airplane on CRITICAL</string>
+    <string name="auto_airplane_desc">If WRITE_SECURE_SETTINGS is granted, enable airplane mode automatically; otherwise open the system panel</string>
+    <string name="secure_write_yes">Secure write OK</string>
+    <string name="secure_write_no">Secure write missing</string>
+    <string name="airplane_on">Airplane ON</string>
+    <string name="airplane_off">Airplane OFF</string>
+    <string name="mitigate_airplane">Mitigate now</string>
+    <string name="open_airplane_settings">Airplane panel</string>
+    <string name="open_mobile_settings">Mobile network (disable 2G)</string>
+    <string name="adb_grant_hint">Optional privileged grant:\n%1$s</string>
+    <string name="section_serving">Serving cell</string>
+    <string name="section_findings">Findings</string>
+    <string name="no_cell">No serving cell reported (airplane mode, no SIM, or missing permission).</string>
+    <string name="no_findings">No heuristic findings on the latest sample.</string>
+    <string name="status_alert">Suspicious cell activity</string>
+    <string name="status_ok">No high-severity alert</string>
+    <string name="status_idle">Tap refresh or enable monitoring</string>
+    <string name="threat_score">Threat score: %1$d / 100</string>
+    <string name="disclaimer">Heuristics only. Stock Android apps cannot read modem cipher suites or baseband IMSI-request events. False positives are possible (rural cells, roaming, femtocells). On Android 16+, also enable Settings → Safety → Mobile network security when available.</string>
+</resources>
