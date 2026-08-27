@@ -18,8 +18,10 @@ gen/
 out/
 .kotlin/
 keystore.properties
+release.keystore
 *.jks
 *.keystore
 !debug.keystore
+dist/
 .vscode/
 *.log

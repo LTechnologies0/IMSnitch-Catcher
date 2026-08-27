@@ -54,6 +54,17 @@ Also open **Mobile network settings** to disable **2G** on Android 12+ devices t
 ./gradlew test :app:assembleDebug
 ```
 
+### Signed release APKs
+
+```bash
+./scripts/generate-release-keystore.sh   # once
+./gradlew :app:assembleRelease           # per-ABI signed APKs under app/build/outputs/apk/release/
+./scripts/upload-release-secrets.sh      # once — push RELEASE_* secrets to GitHub
+git tag v0.1.0 && git push origin v0.1.0 # triggers Release workflow
+```
+
+Or run **Actions → Release → Run workflow** with tag `v0.1.0`.
+
 ## Permissions
 
 - `ACCESS_FINE_LOCATION` / `ACCESS_COARSE_LOCATION` — required for CellInfo  

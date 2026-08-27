@@ -54,6 +54,8 @@ android {
     }
 }
 
+apply(from = rootProject.file("gradle/abi-release.gradle"))
+
 kotlin {
     compilerOptions {
         jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
@@ -89,3 +91,5 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.7.0")
     androidTestImplementation("androidx.compose.ui:ui-test-junit4")
 }
+
+apply(from = rootProject.file("gradle/release-signing.gradle"))
