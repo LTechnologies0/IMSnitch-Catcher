@@ -12,7 +12,7 @@ android {
         applicationId = "ltechnologies.onionphone.imsnitch"
         minSdk = 26
         targetSdk = 37
-        versionCode = 2
+        versionCode = 3
         versionName = providers.gradleProperty("VERSION_NAME").orElse("0.1.1").get()
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
